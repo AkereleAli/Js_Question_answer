@@ -388,6 +388,55 @@ function helloWorld(int){
 // console.log(helloWorld(15))
 
 
+//  Is the Last Character an "N"?
+// Create a function that takes a string (a random name). If the last character of the name is an "n", return true, otherwise return false.
+
+// Sample below
+// isLastCharacterN("Aiden") ➞ true
+// isLastCharacterN("Piet") ➞ false
+// isLastCharacterN("Bert") ➞ false
+// isLastCharacterN("Dean") ➞ true
+
+function isLastXterN(name){
+if(name.endsWith("n") || name.endsWith("N")){
+  return true 
+}
+  {
+  return false
+}
+}
+// console.log(isLastXterN("aiden"))
+// console.log(isLastXterN("piet"))
+// console.log(isLastXterN("bert"))
+// console.log(isLastXterN("DEAN"))
+
+
+// Write a function that allows a shop to give a discount of 10% 
+// if the cost of purchased quantity is more than 1000.
+// The function should take a parameter for the  quantity
+// You can assume 1 unit quantity will cost 100 dollars.
+// Output the total cost for the user.
+
+function discountEarned(quantityOfItem){
+  let costPerItem = 100
+let totalCost = quantityOfItem * costPerItem
+  let discount = ((10/100) * totalCost)
+   let discountCost = totalCost - discount
+  
+  if(totalCost > 1000){
+   
+    return `You have earned a 10% discount for purchasing ${quantityOfItem} items, each at the rate of ${costPerItem} dollars. Your total cost is ${totalCost} dollars, your discount cost is ${discountCost} dollars`
+  }else{
+    return `Your total cost is ${totalCost} dollars. Thank you for your patronage.`
+  }
+}
+
+//   console.log(discountEarned(20))
+//   console.log(discountEarned(9))
+
+
+
+
 
 
 
