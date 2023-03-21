@@ -384,3 +384,11 @@ function spelling(word) {
 }
 console.log(spelling("eagerly"))
 
+function spelling(word){
+  let splitted = word.split('')
+  let res = []
+  splitted.forEach(function(el,i){
+    res.push(splitted.slice(0, i + 1).join(''))
+  })
+  return res
+ }
