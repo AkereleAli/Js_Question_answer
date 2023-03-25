@@ -392,3 +392,178 @@ function spelling(word){
   })
   return res
  }
+
+// Write a function that takes an array (a) and a value (n) as argument. Return the nth element of 'a'
+// myFunction([1,2,3,4,5],3) Expected 3
+
+function myFunction(a) {
+  return a[n-1]           //a.at(n-1)
+}
+
+// Write a function that takes an array (a) as argument. Remove the first 3 elements of 'a'. Return the result
+// myFunction([1,2,3,4]) Expected [4]
+// myFunction([5,4,3,2,1,0]) Expected [2,1,0]
+
+function myFunction(a) {
+  return a.slice(3)
+}
+
+
+// Write a function that takes an array (a) as argument. Extract the last 3 elements of 'a'. Return the resulting array
+// myFunction([1,2,3,4]) Expected [2,3,4]
+// myFunction([5,4,3,2,1,0]) Expected [2,1,0]
+
+function myFunction(a) {
+  return a.slice(-3)
+}
+
+// Write a function that takes an array (a) as argument. Extract the first 3 elements of a. Return the resulting array
+// myFunction([5,4,3,2,1,0]) Expected [5,4,3]
+
+function myFunction(a) {
+  return a.slice(0,3)
+}
+
+// Write a function that takes an array (a) and a number (n) as arguments. It should return the last n elements of a.
+// myFunction([1, 2, 3, 4, 5], 2) Expected [ 4, 5 ]
+// myFunction([1, 2, 3], 6) Expected [ 1, 2, 3 ]
+// myFunction([1, 2, 3, 4, 5, 6, 7, 8], 3) Expected [ 6, 7, 8 ]
+
+function myFunction(a) {
+  return a.slice(-n)
+}
+
+// Write a function that takes an array (a) and a value (b) as argument. The function should remove all elements equal to 'b' from the array. Return the filtered array.
+// myFunction([1,2,3], 2) Expected [1, 3]
+// myFunction([1,2,'2'], '2') Expected [1, 2]
+// myFunction([false,'2',1], false) Expected ['2', 1]
+// myFunction([1,2,'2',1], 1) Expected [2, '2']
+
+function myFunction(a) {
+  return a.length
+}
+
+// Write a function that takes an array of numbers as argument. Return the number of negative values in the array.
+// myFunction([1,-2,2,-4]) Expected 2
+// myFunction([0,9,1]) Expected 0
+
+function myFunction(a){
+  let countNegative = 0
+ a.forEach(function(value){
+    if(value < 0){
+    countNegative++
+    }
+  })
+  return countNegative
+}
+
+
+// Write a function that takes an array of strings as argument. Sort the array elements alphabetically. Return the result.
+// myFunction(['b', 'c', 'd', 'a']) Expected ['a', 'b', 'c', 'd']
+// myFunction(['z', 'c', 'd', 'a', 'y', 'a', 'w']) Expected ['a', 'a', 'c', 'd', 'w', 'y', 'z']
+
+function myFunction( arr ) {
+  return arr.sort()
+  }
+
+// Write a function that takes an array of numbers as argument. It should return an array with the numbers sorted in descending order.
+// myFunction([1,3,2]) Expected [3,2,1]
+// myFunction([4,2,3,1]) Expected [4,3,2,1]
+
+function myFunction(nums){
+  let result = arr.sort(function(a,b){
+     return b-a
+     }) 
+     return result 
+}
+
+// Write a function that takes an array of numbers as argument. It should return the sum of the numbers
+// myFunction([-50,0,50,200]) Expected 200
+
+let sum = 0
+  nums.forEach(function(num){
+    sum+=num
+  })
+  return sum
+
+// Write a function that takes an array of numbers as argument. It should return the average of the numbers. 
+// myFunction([10,100,40]) Expected 50
+
+function myFunction(nums){
+  let sum = 0
+  nums.forEach(function(num){
+    sum+=num
+  })
+  return sum/nums.length
+}
+
+// Write a function that takes an array of strings as argument. Return the longest string.
+// myFunction(['help', 'me']) Expected 'help'
+// myFunction(['I', 'need', 'candy']) Expected 'candy'
+
+function myFunction(arr){
+  let longestWord = ""
+  arr.forEach(function(el){
+    if(el.length > longestWord.length){
+      longestWord = el 
+    }
+  })
+  return longestWord
+}
+
+
+// Write a function that takes arguments an arbitrary number of arrays. It should return an array containing the values of all arrays.
+// myFunction([true, true], [1, 2], ['a', 'b']) Expected [true, true, 1, 2, 'a', 'b']
+
+function myFunction(...arrays){
+  let result = []
+  arrays.forEach(function(array){
+    result = result.concat(array)
+  })
+  return result
+}
+
+function myFunction(...arrays){
+  return arrays.flat()
+  }
+
+
+// Write a function that takes an array as argument. It should return true if all elements in the array are equal. It should return false otherwise.
+// myFunction([true, true, true, true]) Expected true 
+// myFunction(['test', 'test', 'test']) Expected true 
+// myFunction([1,1,1,2]) Expected false 
+// myFunction(['10',10,10,10]) Expected false
+
+function myFunction(arr){
+  let result = arr.every(function(el){
+    return el === arr[0]
+  })
+return result
+}
+
+// Write a function that takes an array of objects as argument. Sort the array by property b in ascending order. Return the sorted array.
+// myFunction([{a:1,b:2},{a:5,b:4}]) Expected [{a:1,b:2},{a:5,b:4}]
+// myFunction([{a:2,b:10},{a:5,b:4}]) Expected [{a:5,b:4},{a:2,b:10}] 
+// myFunction([{a:1,b:7},{a:2,b:1}]) Expected [{a:2,b:1},{a:1,b:7}]
+
+function myFunction(arr){
+  arr.sort(function(a, b) {
+    return a.b - b.b;
+  });
+  return arr;
+}
+
+// Write a function that takes two arrays as arguments. Merge both arrays and remove duplicate values. Sort the merge result in ascending order. Return the resulting array
+// myFunction([1, 2, 3], [3, 4, 5]) Expected [ 1, 2, 3, 4, 5 ]
+// myFunction([-10, 22, 333, 42], [-11, 5, 22, 41, 42]) Expected [ -11, -10, 5, 22, 41,  42, 333]
+
+function mergeAndSort(arr1, arr2) {
+  var merged = arr1.concat(arr2); // merge the two arrays
+  var unique = merged.filter(function(item, pos) { // remove duplicate values
+    return merged.indexOf(item) === pos;
+  });
+  var sorted = unique.sort(function(a, b) { // sort the resulting array in ascending order
+    return a - b;
+  });
+  return sorted;
+}
