@@ -435,9 +435,149 @@ let totalCost = quantityOfItem * costPerItem
 //   console.log(discountEarned(9))
 
 
+//Write a function that takes a string (a) and a number (n) as argument. Return the nth character of 'a'.
+// myFunction('abcd',1)   Expected 'a'
+//myFunction('zyxbwpl',5) Expected 'w'
+// myFunction('gfedcba',3) Expected 'e'
+
+function myFunction(a){
+  return a.at(n-1) //or a[n-1]
+}
+
+// Write a function that takes a string (a) as argument. Remove the first 3 characters of a. Return the result
+// myFunction('abcdefg') Expected 'defg'
+// myFunction('1234') Expected '4'
+
+function myFunction(a){
+  return a.slice(3)  //or a.substring(3)
+}
+
+// Write a function that takes a string as argument. Extract the last 3 characters from the string. Return the result
+// myFunction('abcdefg')Expected'efg'
+// myFunction('1234')Expected'234'
+// myFunction('fgedcba') Expected 'cba'
+
+function myFunction(str){
+  return str.slice(-3)  //or str.substring(str.length-3)
+}
+
+// Write a function that takes a string (a) as argument. Get the first 3 characters of a. Return the result
+// myFunction('abcdefg') Expected 'abc'
+// myFunction('1234') Expected '123'
+
+function myFunction(a){
+  return a.slice(0,3)  //or a.substring(0,3)
+}
+
+// Write a function that takes a string as argument. The string contains the substring 'is'. Return the index of 'is'.
+// myFunction("praise") Expected 3
+// myFunction("risky") Expected 1
+
+function myFunction(str){
+  return str.indexOf('is')
+}
+
+// Write a function that takes a string (a) as argument. Extract the first half a. Return the result
+// myFunction('abcdefgh')Expected 'abcd' 
+// myFunction('1234') Expected '12'
+
+function myFunction(a){
+  return a.slice(0, a.length / 2) // or a.substring(0, a.length/2)
+}
+
+// Write a function that takes a string (a) as argument. Remove the last 3 characters of a. Return the result
+// myFunction('abcdefg') Expected 'abcd'
+// myFunction('1234') Expected '1'
+
+function myFunction(a){
+  return a.slice(0,-3)  //or a.substring(0,a.length-3)
+}
+
+// Write a function that takes two numbers (a and b) as argument. Return b percent of a
+// myFunction(100,50) Expected 50
+// myFunction(10,1) Expected 0.1
+
+function myFunction(a){
+  return b/100 * a
+}
+
+// Write a function that takes 6 values (a,b,c,d,e,f) as arguments. Sum a and b. Then substract by c. Then multiply by d and divide by e. Finally raise to the power of f and return the result. Tipp: mind the order.
+// myFunction(6,5,4,3,2,1) Expected 10.5
+// myFunction(6,2,1,4,2,3) Expected 2744
+
+function myFunction(a){
+  return ((((a+b)-c)*d)/e)**f //or let result = (a + b - c) * d / e;result = Math.pow(result, f); return result
+}
+
+// Write a function that takes two strings (a and b) as arguments. If a contains b, append b to the beginning of a. If not, append it to the end. Return the concatenation
+// myFunction('cheese', 'cake') Expected 'cheesecake'
+// myFunction('lips', 's') Expected 'slips'
+
+function myFunction(a,b){
+  if(a.indexOf(b)==-1){
+      return `${a}${b}`
+  }
+  return `${b}${a}`
+  }
 
 
+//Write a function that takes a number as argument. If the number is even, return true. Otherwise, return false
+// myFunction(10) Expected true
+// myFunction(-4) Expected true
+// myFunction(5) Expected false
+
+function myFunction(a){
+  return a%2 === 0 ? true : false   //or return a%2 === 0
+}
 
 
+// Write a function that takes two strings (a and b) as arguments. Return the number of times a occurs in b.
+// myFunction('m', 'how many times does the character occur in this sentence?') Expected 2
+// myFunction('h', 'how many times does the character occur in this sentence?') Expected 4
+
+function myFunction(a,b){
+  let toArr = b.split('')
+  let count = 0
+  toArr.forEach(function(el,i){
+    if(a === b[i]){              //or el or b.at(i)
+      count++
+    }
+  })
+  return count
+}
+
+
+// Write a function that takes a number (a) as argument. If a is a whole number (has no decimal place), return true. Otherwise, return false.
+// myFunction(4) Expected true 
+// myFunction(1.123) Expected false 
+// myFunction(1048) Expected true
+
+function myFunction(a){
+  return Number.isInteger(a)    //or a - Math.floor(a) === 0
+}
+
+// Write a function that takes two numbers (a and b) as arguments. If a is smaller than b, divide a by b. Otherwise, multiply both numbers. Return the resulting value
+// myFunction(10, 100) Expected 0.1
+// myFunction(90, 45) Expected 4050
+
+function myFunction(a,b){
+  return a < b ? a/b : a*b
+}
+
+
+// Write a function that takes a number (a) as argument. Round a to the 2nd digit after the decimal point. Return the rounded number
+
+function myFunction(a){
+  return  +(Math.round(a + "e+2") + "e-2")  //or a.Math.toFixed(2) or Number(a.toFixed(2)) or Math.round(a * 100) / 100
+}
+
+
+// Write a function that takes a number (a) as argument. Split a into its individual digits and return them in an array. Tipp: you might want to change the type of the number for the splitting
+// myFunction(931) Expected [9,3,1]
+// myFunction(193278) Expected [1,9,3,2,7,8]
+
+function myFunction(a) {
+  return Array.from(String(a), Number)
+}
 
 
