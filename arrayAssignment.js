@@ -439,8 +439,11 @@ function myFunction(a) {
 // myFunction([false,'2',1], false) Expected ['2', 1]
 // myFunction([1,2,'2',1], 1) Expected [2, '2']
 
-function myFunction(a) {
-  return a.length
+function myFunction(a,b){
+  let result = a.filter(function(item){
+    return item !== b
+  })
+  return result
 }
 
 // Write a function that takes an array of numbers as argument. Return the number of negative values in the array.
@@ -456,6 +459,13 @@ function myFunction(a){
   })
   return countNegative
 }
+
+function myFunction(a){
+  let res = a.filter(function(el){
+return (el<0);
+});
+return res.length
+  }
 
 
 // Write a function that takes an array of strings as argument. Sort the array elements alphabetically. Return the result.
