@@ -581,3 +581,55 @@ function myFunction(a) {
 }
 
 
+function mine(arr){
+  let res = []
+  arr.forEach(function(item){
+      res.push(item.length)
+  })
+  return res
+  }
+  
+
+function mine(arr){
+  const res = arr.map(function(item){
+      return item.length
+  })
+  return res
+  }
+
+  function isAppUsed(arr,b){
+    return arr.includes(b)
+    }   //this is more optimized
+
+    function getYear(arr,year){
+      if(arr.includes(year)){
+          return year
+      }
+      return 'undefined'
+      }    
+      
+      function getYear(arr,year){
+          let foundYear = arr.find(function(item){
+              return item === year
+          })
+          return foundYear
+      } //this is more optimized
+      
+
+      function getFreezingTemperatures(temps){
+        let res = nums.filter(function(num){
+               return num < 0
+           })
+           return res
+           }  //this is more optimized
+           
+           
+      function getFreezingTemperatures(temps){
+        let res = []
+        nums.forEach(function(num){
+            if(num<0)
+            res.push(num)
+        
+           })
+           return res
+           }

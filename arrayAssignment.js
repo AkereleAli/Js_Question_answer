@@ -537,6 +537,10 @@ function myFunction(...arrays){
   return arrays.flat()
   }
 
+  const myFunction = (...arrs) => {
+    return arrs.reduce((acc,cv)=>acc.concat(cv),[]).sort((a,b)=>a-b);    
+         }; 
+    
 
 // Write a function that takes an array as argument. It should return true if all elements in the array are equal. It should return false otherwise.
 // myFunction([true, true, true, true]) Expected true 
